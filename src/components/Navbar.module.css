@@ -1,0 +1,85 @@
+.header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  background: var(--bg-color);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  display: flex;
+  align-items: baseline;
+  transition: transform 0.2s ease;
+}
+
+.logo:hover {
+  transform: scale(1.02);
+}
+
+.dot {
+  color: var(--accent-color);
+  font-size: 2.2rem;
+  line-height: 0;
+}
+
+.links {
+  display: flex;
+  gap: 2rem;
+}
+
+.link,
+.activeLink {
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.2s;
+  text-decoration: none;
+}
+
+.link {
+  color: var(--text-secondary);
+}
+
+.activeLink {
+  color: var(--accent-color);
+}
+
+.link:hover {
+  color: var(--text-primary);
+}
+
+.hireBtn {
+  background: var(--accent-color);
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.hireBtn:hover {
+  background: var(--accent-color-hover);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .links {
+    display: none;
+  }
+  .navbar {
+    padding: 1rem;
+  }
+}
