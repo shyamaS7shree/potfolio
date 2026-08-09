@@ -1,14 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 
 :root {
-  --bg-color: #111111;
-  --bg-secondary: #1a1a1a;
-  --text-primary: #ffffff;
-  --text-secondary: #a1a1aa;
-  --accent-color: #f97316;
-  --accent-color-hover: #ea580c;
+  --bg-color: #0b0b0f;
+  --bg-secondary: rgba(20, 20, 25, 0.6);
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
   
-  --border-color: #333333;
+  /* Vibrant premium accents */
+  --accent-color: #ff5f00;
+  --accent-color-hover: #ff7d26;
+  --accent-gradient: linear-gradient(135deg, #ff5f00 0%, #ff8a00 100%);
+  
+  --border-color: rgba(255, 255, 255, 0.08);
+  --border-focus: rgba(255, 95, 0, 0.4);
+  --card-shadow: 0 12px 40px -10px rgba(0, 0, 0, 0.6);
+  
+  --glass-bg: rgba(15, 15, 20, 0.55);
+  --glass-border: rgba(255, 255, 255, 0.07);
+  --glass-blur: blur(16px);
 }
 
 * {
@@ -19,6 +28,9 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
 }
 
 body {
@@ -26,6 +38,9 @@ body {
   color: var(--text-primary);
   min-height: 100vh;
   overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
+  position: relative;
 }
 
 a {
@@ -33,24 +48,43 @@ a {
   text-decoration: none;
 }
 
-/* Global Content Styling (Excludes Header/Footer) */
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-color);
+}
+
+/* Global Content Styling */
 main {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: inherit;
 }
 
 main p, main span, main div {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: inherit;
 }
 
 main h1, main h2, main h3, main h4, main h5, main h6 {
   font-family: 'Montserrat', sans-serif;
+  letter-spacing: -0.02em;
+}
+
+input, textarea, select, button {
+  font-family: inherit;
 }
 
 button {
   background: none;
   border: none;
   cursor: pointer;
-  font-family: inherit;
 }
 
 /* Base Utility for Sections */
@@ -62,8 +96,11 @@ button {
 
 /* Card Style */
 .card {
-  background: var(--bg-secondary);
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
   border-radius: 12px;
   padding: 2rem;
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--card-shadow);
 }

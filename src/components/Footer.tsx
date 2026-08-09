@@ -9,7 +9,7 @@ export default function Footer() {
           Shyamashree<span className={styles.dot}>.</span>
         </div>
         <p className={styles.tagline}>
-          Shyamashree is a professional portfolio website where you will find great examples of web design and development. Each project is carefully crafted with modern technologies and beautiful user interfaces.
+          A passionate Software Engineer specializing in building premium full-stack web applications, secure REST APIs, and automated enterprise workflows. Committed to clean code, performance optimization, and robust cloud deployments.
         </p>
         
         <div className={styles.socials}>

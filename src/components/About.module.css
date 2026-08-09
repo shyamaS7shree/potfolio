@@ -1,32 +1,184 @@
 .aboutSection {
-  padding: 6rem 2rem;
+  padding: 8rem 2rem;
   display: flex;
   justify-content: center;
+  position: relative;
+}
+
+/* Add a glowing accent background behind about section */
+.aboutSection::before {
+  content: '';
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(255, 95, 0, 0.08) 0%, transparent 70%);
+  filter: blur(50px);
+  z-index: -1;
+  pointer-events: none;
 }
 
 .aboutCard {
-  background: var(--bg-secondary);
-  border: 1px solid var(--border-color);
-  border-radius: 12px;
-  padding: 3rem;
-  max-width: 800px;
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  padding: 4rem;
+  max-width: 1000px;
   width: 100%;
+  box-shadow: var(--card-shadow);
+  transition: all 0.3s ease;
+}
+
+.aboutCard:hover {
+  border-color: rgba(255, 95, 0, 0.2);
+  box-shadow: var(--card-shadow), 0 0 30px rgba(255, 95, 0, 0.05);
 }
 
 .sectionTitle {
   font-size: 3rem;
   margin-bottom: 2.5rem;
   text-align: center;
-  color: var(--accent-color);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  background: linear-gradient(135deg, #ffffff 40%, rgba(255, 255, 255, 0.7) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.content p {
-  font-size: 1.25rem;
+.bioCardContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.greeting {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+}
+
+.nameHighlight {
+  background: linear-gradient(135deg, var(--accent-color) 0%, #ff8a00 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+}
+
+.bioCardContent p {
+  font-size: 1.05rem;
   line-height: 1.8;
   color: var(--text-secondary);
   margin-bottom: 1.5rem;
 }
 
-.content p:last-child {
-  margin-bottom: 0;
+/* High-Impact Attribute Grid */
+.pillarsGrid {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 2.5rem;
+  margin-top: 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+}
+
+.pillarItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  background: rgba(255, 255, 255, 0.01);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  padding: 1.25rem;
+  transition: all 0.3s ease;
+}
+
+.pillarItem:hover {
+  background: rgba(255, 95, 0, 0.03);
+  border-color: rgba(255, 95, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.pillarIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  font-size: 1.4rem;
+  flex-shrink: 0;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.iconCreative {
+  background: linear-gradient(135deg, rgba(236, 72, 153, 0.15), rgba(236, 72, 153, 0.02));
+  color: #ec4899;
+  border-color: rgba(236, 72, 153, 0.25);
+}
+
+.iconHardworking {
+  background: linear-gradient(135deg, rgba(249, 115, 22, 0.15), rgba(249, 115, 22, 0.02));
+  color: #f97316;
+  border-color: rgba(249, 115, 22, 0.25);
+}
+
+.iconLearning {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(16, 185, 129, 0.02));
+  color: #10b981;
+  border-color: rgba(16, 185, 129, 0.25);
+}
+
+.iconSolver {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(59, 130, 246, 0.02));
+  color: #3b82f6;
+  border-color: rgba(59, 130, 246, 0.25);
+}
+
+.pillarText {
+  display: flex;
+  flex-direction: column;
+}
+
+.pillarText h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 0.4rem 0;
+}
+
+.pillarText p {
+  font-size: 0.88rem;
+  line-height: 1.4;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* ==========================================================================
+   Responsive Styling
+   ========================================================================== */
+@media (max-width: 768px) {
+  .aboutCard {
+    padding: 2.5rem 1.5rem;
+  }
+  
+  .sectionTitle {
+    font-size: 2.5rem;
+  }
+  
+  .pillarsGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .aboutSection {
+    padding: 4rem 1rem;
+  }
 }

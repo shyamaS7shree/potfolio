@@ -1,6 +1,7 @@
 'use client';
+
 import { motion } from 'framer-motion';
-import { FaInstagram, FaLinkedinIn, FaGithub } from 'react-icons/fa';
+import { FaInstagram, FaLinkedinIn, FaGithub } from 'react-icons/fa6';
 import { TypeAnimation } from 'react-type-animation';
 import styles from './Hero.module.css';
 
@@ -41,8 +42,8 @@ export default function Hero() {
           </div>
 
           <div className={styles.actions}>
-            <button className={styles.primaryBtn}>Hire Me</button>
-            <button className={styles.secondaryBtn}>Download CV</button>
+            <a href="#contact" className={styles.primaryBtn}>Hire Me</a>
+            <a href="#" className={styles.secondaryBtn}>Download CV</a>
           </div>
 
           <div className={styles.statsBox}>
