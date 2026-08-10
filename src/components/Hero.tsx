@@ -43,7 +43,7 @@ export default function Hero() {
 
           <div className={styles.actions}>
             <a href="#contact" className={styles.primaryBtn}>Hire Me</a>
-            <a href="#" className={styles.secondaryBtn}>Download CV</a>
+            <a href="/Shyamashree_Das_Resume.pdf" download="Shyamashree_Das_Resume.pdf" className={styles.secondaryBtn}>Download CV</a>
           </div>
 
           <div className={styles.statsBox}>
