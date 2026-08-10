@@ -9,8 +9,8 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "My Portfolio",
-  description: "Showcase. Inspire. Get Hired.",
+  title: "Shyamashree Das | Full-Stack Software Engineer",
+  description: "Shyamashree Das — Full-Stack Software Engineer specializing in Next.js, ASP.NET Core, and scalable enterprise applications.",
 };
 
 export default function RootLayout({

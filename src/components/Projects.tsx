@@ -16,6 +16,7 @@ const projects = [
     icon: Mail,
     gradient: "linear-gradient(135deg, #0055ff 0%, #8b5cf6 100%)",
     image: "/projects/smtp_master.png",
+    alt: "SMTP Manager project dashboard screenshot showing mail metrics, delivery rates, and real-time bounce tracking logs",
     tech: ["Next.js", "Node.js", "PostgreSQL", "Brevo SMTP", "Postman", "REST APIs"],
     demo: "https://smtp-manager.vercel.app/",
     backend: "https://smtp-backend-api.onrender.com/",
@@ -27,6 +28,7 @@ const projects = [
     icon: Layers,
     gradient: "linear-gradient(135deg, #00e5ff 0%, #0055ff 100%)",
     image: "/projects/workboard.png",
+    alt: "Workboard project interface screenshot displaying team ticketing panels, workflow boards, and purchase order tracking metrics",
     tech: ["Next.js", "Tailwind CSS", "ASP.NET Core", "SQL Server", "REST APIs"],
     demo: "https://rsklive.com/workboard/dashboard/",
     github: "https://github.com/RS-ConsultancyKolkata/workboard"
@@ -37,6 +39,7 @@ const projects = [
     icon: ShoppingCart,
     gradient: "linear-gradient(135deg, #ff0055 0%, #ff5f00 100%)",
     image: "/projects/shopore_store.jpg",
+    alt: "Shopore Store homepage interface screenshot showing premium shopping product grids, cart details, and checkout system layout",
     tech: ["Next.js", "ASP.NET Core", "Supabase", "Razorpay", "Resend", "REST APIs"],
     demo: "https://shoporestore.vercel.app/",
     github: "https://github.com/shyamaS7shree/Shoporestore"
@@ -118,7 +121,7 @@ export default function Projects() {
                 {project.image ? (
                   <img 
                     src={project.image} 
-                    alt={project.title} 
+                    alt={project.alt} 
                     className={styles.projectImage} 
                   />
                 ) : (

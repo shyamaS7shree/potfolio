@@ -74,7 +74,7 @@ export default function Hero() {
           <div className={styles.imageContainer}>
             <img
               src="/own.png"
-              alt="Portrait"
+              alt="Shyamashree Das portrait"
               className={styles.portrait}
             />
           </div>
