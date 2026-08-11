@@ -6,7 +6,7 @@ import {
   SiReact, SiNextdotjs, SiTailwindcss, SiBootstrap, 
   SiDotnet, SiNodedotjs, SiExpress, SiJsonwebtokens, 
   SiPostgresql, SiMysql, SiSupabase, 
-  SiPrisma, SiDocker, SiKubernetes, 
+  SiDocker, SiKubernetes, 
   SiGit, SiGithub, SiSwagger 
 } from 'react-icons/si';
 import { FaJava, FaDatabase } from 'react-icons/fa6';
@@ -52,8 +52,7 @@ const skillCategories = [
       { name: "SQL Server", icon: FaDatabase, color: "#cc292b", glow: "rgba(204, 41, 43, 0.4)" },
       { name: "PostgreSQL", icon: SiPostgresql, color: "#4169e1", glow: "rgba(65, 105, 225, 0.4)" },
       { name: "MySQL", icon: SiMysql, color: "#4479a1", glow: "rgba(68, 121, 161, 0.4)" },
-      { name: "Supabase", icon: SiSupabase, color: "#3ecf8e", glow: "rgba(62, 207, 142, 0.4)" },
-      { name: "Prisma ORM", icon: SiPrisma, color: "#5a67d8", glow: "rgba(90, 103, 216, 0.4)" }
+      { name: "Supabase", icon: SiSupabase, color: "#3ecf8e", glow: "rgba(62, 207, 142, 0.4)" }
     ]
   },
   {

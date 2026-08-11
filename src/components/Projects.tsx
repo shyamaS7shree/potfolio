@@ -24,14 +24,14 @@ const projects = [
   },
   {
     title: "WORKBOARD",
-    description: "A secure, real-time enterprise management portal for automating ticketing, purchase orders, and team workflow. Built with an ASP.NET Core C# API backend and a Next.js frontend.",
+    description: "A secure, real-time enterprise management portal for automating ticketing, purchase orders, and team workflow. Built with an ASP.NET Core C# API backend and a Next.js frontend. (Confidential company project developed by me).",
     icon: Layers,
     gradient: "linear-gradient(135deg, #00e5ff 0%, #0055ff 100%)",
     image: "/projects/workboard.png",
     alt: "Workboard project interface screenshot displaying team ticketing panels, workflow boards, and purchase order tracking metrics",
     tech: ["Next.js", "Tailwind CSS", "ASP.NET Core", "SQL Server", "REST APIs"],
     demo: "https://rsklive.com/workboard/dashboard/",
-    github: "https://github.com/RS-ConsultancyKolkata/workboard"
+    github: ""
   },
   {
     title: "SHOPORE STORE",
@@ -154,9 +154,11 @@ export default function Projects() {
                 </div>
                 
                 <div className={styles.projectLinks}>
-                  <a href={project.github} className={styles.linkBtn} target="_blank" rel="noopener noreferrer">
-                    <FaGithub size={16} /> GITHUB
-                  </a>
+                  {project.github && (
+                    <a href={project.github} className={styles.linkBtn} target="_blank" rel="noopener noreferrer">
+                      <FaGithub size={16} /> GITHUB
+                    </a>
+                  )}
                   {project.backend && (
                     <a href={project.backend} className={styles.linkBtn} target="_blank" rel="noopener noreferrer">
                       <ExternalLink size={14} /> BACKEND
